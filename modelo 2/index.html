@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&S Pastel - Pastéis Artesanais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">S&S Pastel</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Pastéis Artesanais<br><span class="highlight">Sabor Autêntico</span></h1>
+                    <p class="subtitle">Tradição familiar em cada mordida. Massa crocante, recheios generosos e ingredientes selecionados para uma experiência única.</p>
+                    <div class="hero-buttons">
+                        <a href="#cardapio" class="cta-button primary">Ver Cardápio</a>
+                        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido na S&S Pastel" class="cta-button secondary" target="_blank">
+                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            Peça Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg"></div>
+        </section>
+
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">Por que escolher a S&S Pastel?</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🥟</div>
+                        <h3>Massa Artesanal</h3>
+                        <p>Nossa massa é preparada diariamente seguindo receitas tradicionais, garantindo a crocância perfeita em cada pastel.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥩</div>
+                        <h3>Ingredientes Premium</h3>
+                        <p>Utilizamos apenas ingredientes frescos e de alta qualidade, selecionados criteriosamente para oferecer o melhor sabor.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Preparo Rápido</h3>
+                        <p>Atendimento ágil sem comprometer a qualidade. Seus pastéis ficam prontos rapidamente para você saborear quentinhos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cardapio" class="section menu-section">
+            <div class="container">
+                <h2 class="section-title">Nosso Cardápio</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">Todos</button>
+                    <button class="category-btn" data-category="salgados">Salgados</button>
+                    <button class="category-btn" data-category="doces">Doces</button>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="salgados">
+                        <div class="menu-item-image">🥩</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel de Carne</h3>
+                            <p>Carne moída temperada com cebola, alho e temperos especiais da casa.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 8,50</span>
+                                <button class="add-btn" data-item="Pastel de Carne" data-price="8.50">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="salgados">
+                        <div class="menu-item-image">🧀</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel de Queijo</h3>
+                            <p>Queijo mussarela derretido em abundância, cremoso e saboroso.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 7,00</span>
+                                <button class="add-btn" data-item="Pastel de Queijo" data-price="7.00">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="salgados">
+                        <div class="menu-item-image">🍤</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel de Camarão</h3>
+                            <p>Camarões frescos refogados com temperos especiais e cream cheese.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 12,00</span>
+                                <button class="add-btn" data-item="Pastel de Camarão" data-price="12.00">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="salgados">
+                        <div class="menu-item-image">🐔</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel de Frango</h3>
+                            <p>Frango desfiado temperado com catupiry e ervas finas.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 9,00</span>
+                                <button class="add-btn" data-item="Pastel de Frango" data-price="9.00">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="salgados">
+                        <div class="menu-item-image">🥬</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel de Palmito</h3>
+                            <p>Palmito fresco com queijo e temperos especiais, opção vegetariana.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 8,00</span>
+                                <button class="add-btn" data-item="Pastel de Palmito" data-price="8.00">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="doces">
+                        <div class="menu-item-image">🍫</div>
+                        <div class="menu-item-content">
+                            <h3>Pastel Doce</h3>
+                            <p>Banana com chocolate, polvilhado com açúcar e canela.</p>
+                            <div class="menu-item-footer">
+                                <span class="price">R$ 6,00</span>
+                                <button class="add-btn" data-item="Pastel Doce" data-price="6.00">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="localizacao" class="section location-section">
+            <div class="container">
+                <h2 class="section-title">Nossa Localização</h2>
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Venha nos visitar</h3>
+                        <p>Estamos localizados em um ponto estratégico da cidade, de fácil acesso e com estacionamento disponível. Nossa pastelaria oferece um ambiente acolhedor para toda a família.</p>
+                        <div class="address-info">
+                            <h4>📍 Endereço Completo</h4>
+                            <p>Rua dos Pastéis, 123 - Centro<br>São Paulo, SP - CEP 01234-567</p>
+                        </div>
+                        <div class="address-info">
+                            <h4>🕒 Horário de Funcionamento</h4>
+                            <p>Segunda a Sábado: 17h às 23h<br>Domingo: 17h às 22h</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14142.552028779673!2d-48.66897065!3d-27.6047504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95274b0e80695265%3A0x9339280fecbbe61e!2sPastel%20S%26S!5e0!3m2!1spt-BR!2sbr!4v1748004646513!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Fale Conosco</h3>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📱</div>
+                            <div>
+                                <strong>WhatsApp</strong><br>
+                                (11) 99999-9999
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🚚</div>
+                            <div>
+                                <strong>Delivery</strong><br>
+                                Entrega em toda região<br>
+                                Pedido mínimo: R$ 25,00
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido na S&S Pastel" class="whatsapp-button" target="_blank">
+                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            Falar com Atendente
+                        </a>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Envie uma Mensagem</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Seu telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Sua mensagem" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>S&S Pastel</h3>
+                    <p>Tradição e qualidade em pastéis artesanais desde 2020. Sabor que marca gerações.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>📱 (11) 99999-9999</p>
+                    <p>📍 Rua dos Pastéis, 123 - Centro</p>
+                    <p>🌐 São Paulo, SP</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horários</h3>
+                    <p>Segunda a Sábado: 17h às 23h</p>
+                    <p>Domingo: 17h às 22h</p>
+                    <p>🚚 Delivery disponível</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 S&S Pastel. Todos os direitos reservados. Desenvolvido com ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-float" id="cartFloat">
+        <div class="cart-icon">🛒</div>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido na S&S Pastel" class="floating-whatsapp" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
