@@ -1,0 +1,464 @@
+:root {
+    --color-bg: #0d1117;
+    --color-text: #c9d1d9;
+    --color-border: #30363d;
+    --color-header: #161b22;
+    --color-btn-bg: #0d1117;
+    --color-btn-hover: #2d333b;
+    --color-btn-border: #30363d;
+    --color-text-hover: #ffffff;
+    --color-footer-text: #8b949e;
+    --bg-primary: #0f1419;
+    --bg-secondary: #161b22;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --link-color: #58a6ff;
+    --accent-color: #238636;
+    --whatsapp-color: #25d366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+.navbar {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-back:hover {
+    color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+}
+
+.proposal-content {
+    background-color: var(--color-btn-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 32px 0;
+}
+
+.validity-banner {
+    background-color: #ffd60a15;
+    border: 1px solid #ffd60a30;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    color: #ffd60a;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+h1 {
+    color: var(--color-text-hover);
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--color-text-hover);
+    margin: 24px 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--accent-color);
+    margin: 20px 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+ul {
+    margin: 12px 0 12px 24px;
+    font-size: 13px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.service-item {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.service-title {
+    color: var(--color-text-hover);
+    font-weight: 600;
+    font-size: 14px;
+    flex: 1;
+}
+
+.service-price {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+.service-description {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.pricing-table {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 13px;
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+    font-weight: 600;
+    color: var(--color-text-hover);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(56, 142, 60, 0.1) 100%);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.special-badge {
+    position: absolute;
+    top: -1px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 0 0 8px 8px;
+    letter-spacing: 0.5px;
+}
+
+.highlight-box h3 {
+    color: var(--color-text-hover);
+    margin: 8px 0 16px 0;
+    font-size: 16px;
+}
+
+.highlight-price {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent-color);
+    margin: 12px 0;
+    text-shadow: 0 0 20px rgba(35, 134, 54, 0.3);
+}
+
+.savings {
+    background: rgba(255, 193, 7, 0.15);
+    color: #ffd60a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.warning-box {
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid var(--color-btn-border);
+    border-radius: 6px;
+    background-color: var(--color-btn-bg);
+    color: var(--color-text);
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--color-btn-hover);
+    color: var(--color-text-hover);
+    text-decoration: none;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    border: 2px solid;
+}
+
+.btn-whatsapp i {
+    font-size: 24px;
+}
+
+.btn-whatsapp div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.btn-subtitle {
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--whatsapp-color) 0%, #128c7e 100%);
+    border-color: var(--whatsapp-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--color-btn-bg);
+    border-color: var(--whatsapp-color);
+    color: var(--whatsapp-color);
+}
+
+.btn-secondary:hover {
+    background: var(--whatsapp-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.2);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: calc(50% - 375px + 24px);
+    background-color: var(--color-btn-bg);
+    color: var(--color-text);
+    width: 44px;
+    height: 36px;
+    border: 1px solid var(--color-btn-border);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: var(--color-btn-hover);
+    color: var(--color-text-hover);
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-back:hover,
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.back-to-top:hover {
+    text-decoration: none !important;
+}
+
+@media (max-width: 790px) {
+    .back-to-top {
+        right: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+    
+    .nav-title {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    .proposal-content {
+        padding: 16px;
+        margin: 24px 0;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .service-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .service-price {
+        margin-left: 0;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-whatsapp {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-title {
+        font-size: 16px;
+    }
+    
+    .nav-back {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    
+    .highlight-price {
+        font-size: 28px;
+    }
+}
