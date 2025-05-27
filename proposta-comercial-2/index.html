@@ -3,712 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>euoryan // Proposta Comercial - S&S Pastel</title>
+    <title>euoryan // proposta comercial</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/euoryan/euoryan.github.io/refs/heads/main/assets/images/favicon/euoryan.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --color-bg: #0d1117;
-            --color-text: #c9d1d9;
-            --color-border: #30363d;
-            --color-header: #161b22;
-            --color-card-bg: #21262d;
-            --color-card-hover: #2d333b;
-            --color-text-white: #ffffff;
-            --color-accent: #58a6ff;
-            --color-accent-hover: #79b8ff;
-            --color-success: #238636;
-            --color-warning: #f85149;
-            --color-special: #d2a8ff;
-            --transition-smooth: all 0.3s ease-in-out;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            min-height: 100vh;
-            scroll-behavior: smooth;
-        }
-
-        .header {
-            background-color: var(--color-header);
-            padding: 24px 0;
-            border-bottom: 1px solid var(--color-border);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            color: var(--color-text-white);
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .header .subtitle {
-            font-size: 18px;
-            color: var(--color-text);
-            font-weight: 400;
-            font-style: italic;
-        }
-
-        .content {
-            padding: 40px 0;
-        }
-
-        .section {
-            background-color: var(--color-card-bg);
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            padding: 32px;
-            margin-bottom: 24px;
-            transition: var(--transition-smooth);
-        }
-
-        .section:hover {
-            background-color: var(--color-card-hover);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            color: var(--color-text-white);
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--color-border);
-            text-align: left;
-        }
-
-        .section h3 {
-            color: var(--color-text-white);
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            margin-top: 24px;
-            text-align: left;
-        }
-
-        .section h4 {
-            color: var(--color-accent);
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .section p {
-            margin-bottom: 16px;
-            text-align: left;
-            line-height: 1.7;
-        }
-
-        .section ul {
-            margin-left: 24px;
-            margin-bottom: 16px;
-            text-align: left;
-        }
-
-        .section li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .highlight {
-            background-color: var(--color-success);
-            color: var(--color-text-white);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .price {
-            color: var(--color-accent);
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: var(--color-header);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .table th,
-        .table td {
-            padding: 16px;
-            text-align: left;
-            border-bottom: 1px solid var(--color-border);
-        }
-
-        .table th {
-            background-color: var(--color-card-bg);
-            color: var(--color-text-white);
-            font-weight: 600;
-        }
-
-        .table td {
-            color: var(--color-text);
-        }
-
-        .table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 24px;
-            font-size: 16px;
-            font-weight: 600;
-            background-color: var(--color-success);
-            color: var(--color-text-white);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: var(--transition-smooth);
-            margin: 20px 0;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #2ea043;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(35, 134, 54, 0.3);
-        }
-
-        .whatsapp-btn i {
-            font-size: 20px;
-        }
-
-        .warning {
-            background-color: rgba(248, 81, 73, 0.1);
-            border: 1px solid var(--color-warning);
-            border-radius: 8px;
-            padding: 16px;
-            margin: 16px 0;
-        }
-
-        .warning p {
-            color: var(--color-warning);
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        .info {
-            background-color: rgba(88, 166, 255, 0.1);
-            border: 1px solid var(--color-accent);
-            border-radius: 8px;
-            padding: 16px;
-            margin: 16px 0;
-        }
-
-        .info p {
-            color: var(--color-accent);
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        .special-offer {
-            background: linear-gradient(135deg, rgba(210, 168, 255, 0.15), rgba(88, 166, 255, 0.15));
-            border: 2px solid var(--color-special);
-            border-radius: 12px;
-            padding: 24px;
-            margin: 24px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .special-offer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-special), var(--color-accent));
-        }
-
-        .special-offer h3 {
-            color: var(--color-special);
-            font-size: 20px;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .special-offer p {
-            color: var(--color-text-white);
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .special-offer .price-comparison {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 16px 0;
-            flex-wrap: wrap;
-        }
-
-        .old-price {
-            font-size: 18px;
-            color: var(--color-text);
-            text-decoration: line-through;
-        }
-
-        .new-price {
-            font-size: 24px;
-            color: var(--color-special);
-            font-weight: 700;
-        }
-
-        .discount-badge {
-            background-color: var(--color-success);
-            color: var(--color-text-white);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .steps {
-            counter-reset: step-counter;
-        }
-
-        .step {
-            counter-increment: step-counter;
-            position: relative;
-            padding-left: 40px;
-            margin-bottom: 20px;
-        }
-
-        .step::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: var(--color-accent);
-            color: var(--color-text-white);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .footer {
-            background-color: var(--color-header);
-            padding: 24px 0;
-            border-top: 1px solid var(--color-border);
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .footer p {
-            color: var(--color-text);
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .section {
-                padding: 20px 16px;
-            }
-
-            .header h1 {
-                font-size: 22px;
-                line-height: 1.3;
-            }
-
-            .header .subtitle {
-                font-size: 15px;
-                line-height: 1.4;
-            }
-
-            .section h2 {
-                font-size: 20px;
-                line-height: 1.3;
-            }
-
-            .section h3 {
-                font-size: 18px;
-                line-height: 1.3;
-            }
-
-            .section h4 {
-                font-size: 16px;
-                line-height: 1.3;
-            }
-
-            .table th,
-            .table td {
-                padding: 12px 8px;
-                font-size: 14px;
-            }
-
-            .whatsapp-btn {
-                width: 100%;
-                justify-content: center;
-                padding: 18px 24px;
-                font-size: 15px;
-            }
-
-            .price-comparison {
-                flex-direction: column;
-                align-items: flex-start !important;
-                gap: 8px !important;
-            }
-
-            .special-offer {
-                padding: 20px 16px;
-            }
-
-            .special-offer h3 {
-                font-size: 18px;
-                line-height: 1.3;
-            }
-
-            .new-price {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 20px;
-            }
-
-            .header .subtitle {
-                font-size: 14px;
-            }
-
-            .section h2 {
-                font-size: 18px;
-            }
-
-            .section h3 {
-                font-size: 16px;
-            }
-
-            .section h4 {
-                font-size: 15px;
-            }
-
-            .table th,
-            .table td {
-                padding: 10px 6px;
-                font-size: 13px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Proposta Comercial</h1>
-            <p class="subtitle">Estruturação Completa de Marca e Presença Digital</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-title">Proposta Comercial</div>
+            <a href="../" class="nav-back">
+                <i class="fas fa-arrow-left"></i>
+                Voltar
+            </a>
         </div>
-    </header>
+    </nav>
 
     <main class="container">
-        <div class="content">
-            <section class="section">
-                <h2>Sobre o Projeto</h2>
-                <p>Este projeto foi desenvolvido para <strong>transformar a S&S Pastel</strong> em uma marca reconhecida e confiável no mercado. <span class="highlight">Instagram, Google maps, site.</span></p>
-                <p>Vamos trabalhar nos pilares fundamentais que toda marca de sucesso precisa ter: <strong>identidade visual forte</strong>, <strong>presença digital profissional</strong> e <strong>estratégia de alcance direcionada</strong>.</p>
-            </section>
+        <div class="proposal-content">
+            <div class="validity-banner">
+                <i class="fas fa-clock"></i>
+                <strong>Proposta válida por:</strong> 4 dias a partir da data de envio
+            </div>
 
-            <section class="section">
-                <h2>O Que Está Incluído</h2>
+            <h1>Estruturação de Marca e Presença Digital</h1>
+            
+            <p>Este projeto foi desenvolvido para transformar a <strong>S&S Pastel</strong> em uma marca reconhecida e confiável no mercado. Instagram, Google maps, site.</p>
+            
+            <p>Vamos trabalhar nos pilares fundamentais que toda marca de sucesso precisa ter: identidade visual forte, presença digital profissional e estratégia de alcance direcionada.</p>
 
-                <h4>1. Criação de Logotipo Profissional</h4>
-                <p><em>A identidade visual que vai representar sua marca</em></p>
+            <h2>O Que Está Incluído</h2>
+
+            <div class="service-item">
+                <div class="service-header">
+                    <div class="service-title">1. Criação de Logotipo Profissional</div>
+                    <div class="service-price">R$ 200,00</div>
+                </div>
+                <div class="service-description">A identidade visual que vai representar sua marca</div>
                 <ul>
                     <li><strong>Por que é essencial:</strong> Sua logo será a primeira impressão dos clientes</li>
                     <li>Design exclusivo e moderno adaptado ao seu negócio</li>
-                    <li><strong>Investimento:</strong> <span class="price">R$ 200,00</span></li>
                 </ul>
+            </div>
 
-                <h4>2. Estruturação do Instagram</h4>
-                <p><em>Sua vitrine digital que nunca fecha</em></p>
+            <div class="service-item">
+                <div class="service-header">
+                    <div class="service-title">2. Estruturação do Instagram</div>
+                    <div class="service-price">R$ 200,00</div>
+                </div>
+                <div class="service-description">Sua vitrine digital que nunca fecha</div>
                 <ul>
                     <li><strong>Por que é essencial:</strong> 85% dos clientes pesquisam no Instagram antes de comprar</li>
                     <li>Perfil otimizado com bio estratégica</li>
                     <li>Estratégia de conteúdo inicial</li>
                     <li>A estruturação envolve a biografia completa, onde será inserido o link do website para criar impacto visual de site próprio e demonstrar profissionalismo</li>
-                    <li><strong>Investimento:</strong> <span class="price">R$ 200,00</span></li>
                 </ul>
+            </div>
 
-                <h4>3. Site Profissional (Landing Page)</h4>
-                <p><em>Seu cartão de visitas digital 24/7</em></p>
+            <div class="service-item">
+                <div class="service-header">
+                    <div class="service-title">3. Site Profissional (Landing Page)</div>
+                    <div class="service-price">R$ 200,00</div>
+                </div>
+                <div class="service-description">Seu cartão de visitas digital 24/7</div>
                 <ul>
                     <li><strong>Por que é essencial:</strong> Transmite confiança e profissionalismo instantaneamente</li>
                     <li>Design responsivo (funciona perfeitamente em celular e desktop)</li>
                     <li>Direcionamento estratégico para WhatsApp</li>
-                    <li>Hospedagem <span class="highlight">GRATUITA</span> em servidor próprio</li>
-                    <li><strong>Investimento:</strong> <span class="price">R$ 200,00</span></li>
+                    <li>Hospedagem GRATUITA em servidor próprio</li>
                 </ul>
+            </div>
 
-                <h4>4. Otimização do Google Maps</h4>
-                <p><em>Para que te encontrem facilmente</em></p>
+            <div class="service-item">
+                <div class="service-header">
+                    <div class="service-title">4. Otimização do Google Maps</div>
+                    <div class="service-price">R$ 200,00</div>
+                </div>
+                <div class="service-description">Para que te encontrem facilmente</div>
                 <ul>
                     <li><strong>Por que é essencial:</strong> Clientes locais te encontrarão primeiro</li>
                     <li>Perfil comercial completo e otimizado</li>
                     <li>Configuração de horários, contatos e informações</li>
                     <li>Estratégia para receber mais avaliações positivas</li>
-                    <li><strong>Investimento:</strong> <span class="price">R$ 200,00</span></li>
                 </ul>
-            </section>
-
-            <section class="section">
-                <h2>Custos Adicionais por Parte do Cliente</h2>
-                <h3>Domínio (sespastel.com)</h3>
-                <p>Para um site com endereço personalizado e profissional:</p>
-                
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Período</th>
-                            <th>Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1 ano</td>
-                            <td>R$ 80,00 <em>(próximo ano R$ 90,00)</em></td>
-                        </tr>
-                        <tr>
-                            <td>2 anos</td>
-                            <td>R$ 140,00</td>
-                        </tr>
-                        <tr>
-                            <td>3 anos</td>
-                            <td>R$ 230,00 <em>(melhor oferta)</em></td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <p><em>Esses valores estão de acordo com o mercado atual; repasso apenas o valor praticado no mercado.</em></p>
-            </section>
-
-            <section class="section">
-                <h2>Estratégia de Implementação</h2>
-                <p><em>O cronograma se adapta ao seu ritmo de pagamento</em></p>
-
-                <div class="steps">
-                    <div class="step">
-                        <h4>Fase 1: Identidade Visual</h4>
-                        <p>Iniciamos criando sua logo profissional. Esta será a base para todo o projeto, pois será utilizada em todos os materiais e plataformas.</p>
-                        <p><strong>Pagamento necessário:</strong> <span class="price">R$ 200,00</span> antes do início</p>
-                    </div>
-
-                    <div class="step">
-                        <h4>Fase 2: Estruturação do Instagram + Aquisição do Domínio</h4>
-                        <p>Com a logo finalizada, estruturamos completamente seu Instagram. <strong>Nesta etapa, será necessário adquirir o domínio</strong>, pois após finalizar a estruturação do Instagram, precisaremos do domínio registrado para criar o site e conectar tudo perfeitamente.</p>
-                        <p><strong>Pagamento necessário:</strong> <span class="price">R$ 200,00</span> + compra do domínio</p>
-                    </div>
-
-                    <div class="step">
-                        <h4>Fase 3: Desenvolvimento do Site</h4>
-                        <p>Com o domínio em mãos e Instagram estruturado, criamos seu site profissional. O site será linkado na bio do Instagram, completando a estratégia de conversão e profissionalismo da marca.</p>
-                        <p><strong>Pagamento necessário:</strong> <span class="price">R$ 200,00</span> antes do início</p>
-                    </div>
-
-                    <div class="step">
-                        <h4>Fase 4: Visibilidade Local (Google Maps)</h4>
-                        <p>Finalizamos otimizando seu Google Maps para que clientes da região te encontrem facilmente e tenham todas as informações necessárias.</p>
-                        <p><strong>Pagamento necessário:</strong> <span class="price">R$ 200,00</span> antes do início</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Informações Importantes</h2>
-
-                <h3>Sobre Alterações Futuras no Website</h3>
-                <ul>
-                    <li>O projeto inclui <strong>tudo pronto e finalizado</strong></li>
-                    <li>Alterações após a entrega: <span class="price">R$ 100,00 por mês utilizado</span></li>
-                    <li><strong>Dica Importante:</strong> Junte todas as mudanças e faça de uma vez para economizar</li>
-                </ul>
-
-                <h3>Sobre Hospedagem</h3>
-                <ul>
-                    <li>Hospedagem <span class="highlight">100% GRATUITA</span> em meu servidor próprio</li>
-                    <li>Economia de <strong>R$ 100 a R$ 300 mensais</strong> em hospedagem</li>
-                    <li>Site sempre no ar, rápido e seguro</li>
-                    <li><strong>Diferencial importante:</strong> Qualquer profissional cobraria essa hospedagem por padrão, porém possuo servidor próprio e fornecerei a hospedagem como parte integral do serviço</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2>Investimento Total</h2>
-                
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Serviço</th>
-                            <th>Valor</th>
-                            <th>Pagamento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Criação de Logo</td>
-                            <td>R$ 200,00</td>
-                            <td><strong>Antes do início</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Estruturação Instagram</td>
-                            <td>R$ 200,00</td>
-                            <td><strong>Antes do início</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Site Profissional + Hospedagem</td>
-                            <td>R$ 200,00</td>
-                            <td><strong>Antes do início</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Otimização Google Maps</td>
-                            <td>R$ 200,00</td>
-                            <td><strong>Antes do início</strong></td>
-                        </tr>
-                        <tr style="background-color: var(--color-success); color: var(--color-text-white);">
-                            <td><strong>TOTAL</strong></td>
-                            <td><strong>R$ 800,00</strong></td>
-                            <td><strong>Pago por etapa</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>O que você economiza:</h3>
-                <ul>
-                    <li>Hospedagem gratuita: <span class="price">R$ 1.200 a R$ 3.600/ano</span></li>
-                    <li>Pacote completo por etapas: <span class="price">R$ 800,00</span></li>
-                    <li>Pacote completo á vista: <span class="price">R$ 700,00</span></li>
-                    <li>Este mesmo serviço completo facilmente custaria entre <strong>R$ 5.000 a R$ 8.000</strong> no mercado, mas por <span class="highlight">R$ 800,00</span> você garantirá toda a estrutura da sua marca e fidelizará sua marca ao público</li>
-                </ul>
-            </section>
-
-            <div class="special-offer">
-                <h3><i class="fas fa-star"></i> OFERTA - PAGAMENTO À VISTA</h3>
-                <p>Para facilitar seu investimento e começarmos imediatamente, ofereço um desconto especial para pagamento à vista:</p>
-                <div class="price-comparison">
-                    <span class="old-price">R$ 800,00</span>
-                    <span class="new-price">R$ 700,00</span>
-                    <span class="discount-badge">Economia de R$ 100</span>
-                </div>
-                <p><strong>Vantagens do pagamento à vista:</strong></p>
-                <ul>
-                    <li>✅ Desconto de <strong>R$ 100,00</strong></li>
-                    <li>✅ Prioridade total na execução</li>
-                </ul>
-                <p><em></em></p>
-                <p><em>Pagamento via PIX!</em></p>
             </div>
 
-            <section class="section">
-                <h2>Condições de Pagamento e Prazos</h2>
-
-                <h3>Sistema de Pagamento</h3>
-                <ul>
-                    <li><strong>Opção 1 - Por Etapas:</strong> Cada serviço é pago individualmente (R$ 200,00) via PIX antes do início da execução</li>
-                    <li><strong>Opção 2 - À Vista:</strong> Pagamento único de R$ 700,00 via PIX com início imediato</li>
-                    <li><strong>Não há cobrança adicional</strong> entre os serviços</li>
-                    <li><strong>Ordem de execução:</strong> Conforme sequência apresentada acima</li>
-                </ul>
-
-                <h3>Prazos Importantes</h3>
-                <ul>
-                    <li><strong>Prazo para aceitar a proposta:</strong> 4 dias</li>
-                    <li><strong>Prazo para pagamento após aceite:</strong> 4 dias para o primeiro pagamento e confirmação do início do serviço</li>
-                    <li><strong>Prazo total de finalização:</strong> 30 dias</li>
-                </ul>
-
-                <div class="warning">
-                    <p><strong>ATENÇÃO:</strong> Caso passe 30 dias sem continuidade do projeto, será adicionado R$ 100,00 a cada serviço em atraso para retomada do trabalho.</p>
+            <h2>Custos Adicionais por Parte do Cliente</h2>
+            <h3>Domínio (sespastel.com)</h3>
+            <p>Para um site com endereço personalizado e profissional:</p>
+            
+            <div class="pricing-table">
+                <div class="pricing-row">
+                    <span>1 ano</span>
+                    <span>R$ 80,00 (próximo ano R$ 90,00)</span>
                 </div>
-
-                <div class="warning">
-                    <p><strong>Importante:</strong> Uma vez iniciado o projeto, caso haja desistência durante o processo, será aplicada uma taxa de continuidade de R$ 150,00, considerando que toda estruturação e planejamento já foram desenvolvidos especificamente para seu negócio.</p>
+                <div class="pricing-row">
+                    <span>2 anos</span>
+                    <span>R$ 140,00</span>
                 </div>
-
-                <h3>Garantias</h3>
-                <div class="info">
-                    <p><strong>10 dias</strong> para ajustes sem custo adicional após finalização do projeto completo</p>
+                <div class="pricing-row">
+                    <span>3 anos</span>
+                    <span>R$ 230,00 (melhor oferta)</span>
                 </div>
-            </section>
+            </div>
 
-            <section class="section">
-                <h2>Próximos Passos</h2>
-                <p>Para dar início ao projeto, escolha uma das opções abaixo:</p>
-                
-                <a href="https://wa.me/5548984613946?text=Ol%C3%A1%20*Ryan*%2C%0A%0AGostaria%20de%20formalizar%20a%20confirma%C3%A7%C3%A3o%20do%20or%C3%A7amento%20apresentado%20para%20os%20seguintes%20servi%C3%A7os%3A%0A%0A-%20Estrutura%C3%A7%C3%A3o%20do%20Instagram%0A-%20Estrutura%C3%A7%C3%A3o%20no%20Google%20Maps%0A-%20Cria%C3%A7%C3%A3o%20de%20site%0A-%20Compra%20de%20dom%C3%ADnio%0A-%20Cria%C3%A7%C3%A3o%20de%20logo%0A%0AOs%20microservi%C3%A7os%20que%20ser%C3%A3o%20realizados%20nessas%20etapas%20ser%C3%A3o%20informados%20ap%C3%B3s%20a%20confirma%C3%A7%C3%A3o%20da%20proposta%20comercial%2C%20visando%20a%20confidencialidade%20do%20servi%C3%A7o.%0A%0AEstou%20de%20acordo%20com%20os%20seguintes%20valores%20e%20condi%C3%A7%C3%B5es%3A%0A%0A-%20Valor%20total%3A%20*R%24%20700%2C00*%0A-%20Forma%20de%20pagamento%3A%20%C3%A0%20vista%20via%20*PIX*%0A-%20Altera%C3%A7%C3%B5es%20futuras%3A%20*R%24%20100%2C00%20por%20m%C3%AAs*%20(para%20modifica%C3%A7%C3%B5es%20no%20conte%C3%BAdo%20ou%20na%20estrutura%20do%20site%2C%20incluindo%20identidade%20visual%2C%20textos%20ou%20funcionalidades)%0A-%20Custos%20adicionais%3A%20despesas%20como%20a%20compra%20do%20dom%C3%ADnio%20ser%C3%A3o%20de%20responsabilidade%20do%20cliente.%0A%0AEste%20acordo%20se%20refere%20aos%20servi%C3%A7os%20prestados%20para%20a%20empresa%20*S%26S%20Pastel*%2C%20em%20desenvolvimento%20com%20*euoryan*." class="whatsapp-btn" target="_blank">
+            <p><em>Esses valores estão de acordo com o mercado atual; repasso apenas o valor praticado no mercado.</em></p>
+
+            <h2>Investimento Total</h2>
+            <div class="pricing-table">
+                <div class="pricing-row">
+                    <span>Criação de Logo</span>
+                    <span>R$ 200,00</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Estruturação Instagram</span>
+                    <span>R$ 200,00</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Site Profissional + Hospedagem</span>
+                    <span>R$ 200,00</span>
+                </div>
+                <div class="pricing-row">
+                    <span>Otimização Google Maps</span>
+                    <span>R$ 200,00</span>
+                </div>
+                <div class="pricing-row">
+                    <span><strong>TOTAL</strong></span>
+                    <span><strong>R$ 800,00</strong></span>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <div class="special-badge">OFERTA ESPECIAL</div>
+                <h3>PAGAMENTO À VISTA</h3>
+                <div class="highlight-price">R$ 700,00</div>
+                <div class="savings">Economia de R$ 100,00</div>
+                <p>Para facilitar seu investimento e começarmos imediatamente</p>
+            </div>
+
+            <h2>Vantagens do Projeto</h2>
+            <ul>
+                <li>Hospedagem gratuita: Economia de R$ 1.200 a R$ 3.600/ano</li>
+                <li>Pacote completo com desconto à vista</li>
+                <li>Este mesmo serviço completo facilmente custaria entre R$ 5.000 a R$ 8.000 no mercado</li>
+                <li>Estrutura completa da sua marca em 30 dias</li>
+            </ul>
+
+            <h2>Condições de Pagamento</h2>
+            <p><strong>Sistema de Pagamento:</strong></p>
+            <ul>
+                <li><strong>Opção 1 - Por Etapas:</strong> Cada serviço é pago individualmente (R$ 200,00) via PIX antes do início da execução</li>
+                <li><strong>Opção 2 - À Vista:</strong> Pagamento único de R$ 700,00 via PIX com início imediato</li>
+            </ul>
+
+            <p><strong>Prazos:</strong></p>
+            <ul>
+                <li>Prazo para aceitar a proposta: 4 dias</li>
+                <li>Prazo para pagamento após aceite: 4 dias para o primeiro pagamento</li>
+                <li>Prazo total de finalização: 30 dias</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>ATENÇÃO:</strong> Caso passe 30 dias sem continuidade do projeto, será adicionado R$ 100,00 a cada serviço em atraso para retomada do trabalho.</p>
+                <p>Uma vez iniciado o projeto, caso haja desistência durante o processo, será aplicada uma taxa de continuidade de R$ 150,00.</p>
+            </div>
+
+            <h2>Garantias</h2>
+            <ul>
+                <li>10 dias para ajustes sem custo adicional após finalização do projeto completo</li>
+                <li>Hospedagem 100% GRATUITA em servidor próprio</li>
+                <li>Alterações futuras no website: R$ 100,00 por mês utilizado</li>
+            </ul>
+
+            <h2>Próximos Passos</h2>
+            <p>Para dar início ao projeto, escolha uma das opções abaixo:</p>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/5548984613946?text=Ol%C3%A1%20*Ryan*%2C%0A%0AGostaria%20de%20formalizar%20a%20confirma%C3%A7%C3%A3o%20do%20or%C3%A7amento%20apresentado%20para%20os%20seguintes%20servi%C3%A7os%3A%0A%0A-%20Estrutura%C3%A7%C3%A3o%20do%20Instagram%0A-%20Estrutura%C3%A7%C3%A3o%20no%20Google%20Maps%0A-%20Cria%C3%A7%C3%A3o%20de%20site%0A-%20Compra%20de%20dom%C3%ADnio%0A-%20Cria%C3%A7%C3%A3o%20de%20logo%0A%0AOs%20microservi%C3%A7os%20que%20ser%C3%A3o%20realizados%20nessas%20etapas%20ser%C3%A3o%20informados%20ap%C3%B3s%20a%20confirma%C3%A7%C3%A3o%20da%20proposta%20comercial%2C%20visando%20a%20confidencialidade%20do%20servi%C3%A7o.%0A%0AEstou%20de%20acordo%20com%20os%20seguintes%20valores%20e%20condi%C3%A7%C3%B5es%3A%0A%0A-%20Valor%20total%3A%20*R%24%20700%2C00*%0A-%20Forma%20de%20pagamento%3A%20%C3%A0%20vista%20via%20*PIX*%0A-%20Altera%C3%A7%C3%B5es%20futuras%3A%20*R%24%20100%2C00%20por%20m%C3%AAs*%20(para%20modifica%C3%A7%C3%B5es%20no%20conte%C3%BAdo%20ou%20na%20estrutura%20do%20site%2C%20incluindo%20identidade%20visual%2C%20textos%20ou%20funcionalidades)%0A-%20Custos%20adicionais%3A%20despesas%20como%20a%20compra%20do%20dom%C3%ADnio%20ser%C3%A3o%20de%20responsabilidade%20do%20cliente.%0A%0AEste%20acordo%20se%20refere%20aos%20servi%C3%A7os%20prestados%20para%20a%20empresa%20*S%26S%20Pastel*%2C%20em%20desenvolvimento%20com%20*euoryan*." class="btn-whatsapp btn-primary">
                     <i class="fab fa-whatsapp"></i>
-                    Fechar R$ 700,00 (à vista)
+                    <div>
+                        <span class="btn-title">Fechar R$ 700,00</span>
+                        <span class="btn-subtitle">à vista com desconto</span>
+                    </div>
                 </a>
-
-                <a href="https://wa.me/5548984613946?text=Ol%C3%A1%20*Ryan*%2C%0A%0AGostaria%20de%20formalizar%20a%20confirma%C3%A7%C3%A3o%20do%20or%C3%A7amento%20apresentado%20para%20os%20seguintes%20servi%C3%A7os%3A%0A%0A-%20Estrutura%C3%A7%C3%A3o%20do%20Instagram%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Estrutura%C3%A7%C3%A3o%20no%20Google%20Maps%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Cria%C3%A7%C3%A3o%20de%20site%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Compra%20de%20dom%C3%ADnio%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Cria%C3%A7%C3%A3o%20de%20logo%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A%0AOs%20microservi%C3%A7os%20que%20ser%C3%A3o%20realizados%20em%20cada%20uma%20dessas%20etapas%20ser%C3%A3o%20informados%20ap%C3%B3s%20a%20confirma%C3%A7%C3%A3o%20da%20proposta%20comercial%2C%20garantindo%20a%20confidencialidade%20dos%20servi%C3%A7os.%0A%0AEstou%20de%20acordo%20com%20os%20seguintes%20valores%20e%20condi%C3%A7%C3%B5es%3A%0A%0A-%20Valor%20total%3A%20*R%24%20800%2C00*%0A-%20Forma%20de%20pagamento%3A%20*por%20etapas%2C%20com%20pagamento%20realizado%20antes%20da%20execu%C3%A7%C3%A3o%20de%20cada%20servi%C3%A7o*%0A-%20Altera%C3%A7%C3%B5es%20futuras%3A%20*R%24%20100%2C00%20por%20m%C3%AAs*%20(para%20modifica%C3%A7%C3%B5es%20no%20conte%C3%BAdo%20ou%20na%20estrutura%20do%20site%2C%20incluindo%20mudan%C3%A7as%20na%20identidade%20visual%2C%20textos%20ou%20funcionalidades)%0A-%20Custos%20adicionais%3A%20despesas%20como%20a%20compra%20do%20dom%C3%ADnio%20ser%C3%A3o%20de%20responsabilidade%20do%20cliente.%0A%0AEste%20acordo%20se%20refere%20aos%20servi%C3%A7os%20prestados%20para%20a%20empresa%20*S%26S%20Pastel*%2C%20em%20desenvolvimento%20com%20*euoryan*." class="whatsapp-btn" target="_blank">
+                <a href="https://wa.me/5548984613946?text=Ol%C3%A1%20*Ryan*%2C%0A%0AGostaria%20de%20formalizar%20a%20confirma%C3%A7%C3%A3o%20do%20or%C3%A7amento%20apresentado%20para%20os%20seguintes%20servi%C3%A7os%3A%0A%0A-%20Estrutura%C3%A7%C3%A3o%20do%20Instagram%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Estrutura%C3%A7%C3%A3o%20no%20Google%20Maps%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Cria%C3%A7%C3%A3o%20de%20site%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Compra%20de%20dom%C3%ADnio%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A-%20Cria%C3%A7%C3%A3o%20de%20logo%20*(pagamento%20antes%20da%20execu%C3%A7%C3%A3o%20deste%20servi%C3%A7o)*%0A%0AOs%20microservi%C3%A7os%20que%20ser%C3%A3o%20realizados%20em%20cada%20uma%20dessas%20etapas%20ser%C3%A3o%20informados%20ap%C3%B3s%20a%20confirma%C3%A7%C3%A3o%20da%20proposta%20comercial%2C%20garantindo%20a%20confidencialidade%20dos%20servi%C3%A7os.%0A%0AEstou%20de%20acordo%20com%20os%20seguintes%20valores%20e%20condi%C3%A7%C3%B5es%3A%0A%0A-%20Valor%20total%3A%20*R%24%20800%2C00*%0A-%20Forma%20de%20pagamento%3A%20*por%20etapas%2C%20com%20pagamento%20realizado%20antes%20da%20execu%C3%A7%C3%A3o%20de%20cada%20servi%C3%A7o*%0A-%20Altera%C3%A7%C3%B5es%20futuras%3A%20*R%24%20100%2C00%20por%20m%C3%AAs*%20(para%20modifica%C3%A7%C3%B5es%20no%20conte%C3%BAdo%20ou%20na%20estrutura%20do%20site%2C%20incluindo%20mudan%C3%A7as%20na%20identidade%20visual%2C%20textos%20ou%20funcionalidades)%0A-%20Custos%20adicionais%3A%20despesas%20como%20a%20compra%20do%20dom%C3%ADnio%20ser%C3%A3o%20de%20responsabilidade%20do%20cliente.%0A%0AEste%20acordo%20se%20refere%20aos%20servi%C3%A7os%20prestados%20para%20a%20empresa%20*S%26S%20Pastel*%2C%20em%20desenvolvimento%20com%20*euoryan*." class="btn-whatsapp btn-secondary">
                     <i class="fab fa-whatsapp"></i>
-                    Fechar R$ 800,00 (etapas)
+                    <div>
+                        <span class="btn-title">Fechar R$ 800,00</span>
+                        <span class="btn-subtitle">parcelado por etapas</span>
+                    </div>
                 </a>
+            </div>
 
-                <h3>Sequência de execução:</h3>
-                <div class="steps">
-                    <div class="step">
-                        <strong>Criação de Logo</strong> → Pagamento R$ 200,00
-                    </div>
-                    <div class="step">
-                        <strong>Estruturação Instagram + Compra do Domínio</strong> → Pagamento R$ 200,00 + domínio
-                    </div>
-                    <div class="step">
-                        <strong>Desenvolvimento do Site</strong> → Pagamento R$ 200,00
-                    </div>
-                    <div class="step">
-                        <strong>Otimização Google Maps</strong> → Pagamento R$ 200,00
-                    </div>
-                </div>
-            </section>
+            <p><strong>Compromisso de Qualidade:</strong> Trabalho com dedicação total em cada projeto. Seu sucesso é meu sucesso, por isso me comprometo a entregar um trabalho que realmente faça diferença no seu negócio.</p>
 
-            <section class="section">
-                <h2>Compromisso de Qualidade</h2>
-                <p>Trabalho com dedicação total em cada projeto. Seu sucesso é meu sucesso, por isso me comprometo a entregar um trabalho que realmente faça diferença no seu negócio.</p>
-                <p>Cada etapa só começará após a confirmação do pagamento, garantindo que você tenha total controle sobre o investimento e o cronograma do projeto.</p>
-                <p><strong>Dúvidas?</strong> Estou aqui para esclarecer tudo antes de começarmos.</p>
-            </section>
+            <p style="color: var(--color-footer-text); font-size: 12px; text-align: center; margin-top: 32px;">
+                Proposta válida por 4 dias a partir da data de envio.
+            </p>
         </div>
+
+        <a class="btn" href="../">
+            <i class="fas fa-arrow-left"></i>
+            Voltar
+        </a>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p><em>Proposta válida por 4 dias a partir da data de envio.</em></p>
-        </div>
-    </footer>
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const footerUrl = 'https://raw.githubusercontent.com/euoryan/euoryan.github.io/refs/heads/main/assets/pages/footer.html';
+            const backToTopBtn = document.getElementById('backToTop');
+        
+            function loadFooter() {
+                fetch(footerUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Erro ao carregar o footer');
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.createElement('div');
+                        footerContainer.innerHTML = html.trim();
+        
+                        const newFooter = footerContainer.querySelector('footer');
+        
+                        if (newFooter) {
+                            const existingFooter = document.querySelector('footer');
+                            if (existingFooter) {
+                                existingFooter.parentNode.replaceChild(newFooter, existingFooter);
+                            } else {
+                                document.body.appendChild(newFooter);
+                            }
+                        } else {
+                            throw new Error('Nenhum footer encontrado');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao carregar o footer:', error);
+                        
+                        const fallbackFooter = document.createElement('footer');
+                        fallbackFooter.className = 'footer';
+                        fallbackFooter.innerHTML = `
+                            <div class="footer-container">
+                                <div class="footer-rights">
+                                    <span>© 2024 por Ryan</span>
+                                </div>
+                            </div>
+                        `;
+                        
+                        const existingFooter = document.querySelector('footer');
+                        if (existingFooter) {
+                            existingFooter.parentNode.replaceChild(fallbackFooter, existingFooter);
+                        } else {
+                            document.body.appendChild(fallbackFooter);
+                        }
+                    });
+            }
+
+            function toggleBackToTop() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            }
+
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            window.addEventListener('scroll', toggleBackToTop);
+            
+            loadFooter();
+            toggleBackToTop();
+        });
+    </script>
 </body>
 </html>
